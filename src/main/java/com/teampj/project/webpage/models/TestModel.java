@@ -8,5 +8,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class TestModel {
-    private int seq;
+    private String userName;
+    private String userAge;
+    private String userHeight;
+    private String userWeight;
+    private String userAddress;
+    private String userEmail;
+    private String userTel;
+
 }
