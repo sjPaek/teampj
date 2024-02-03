@@ -24,6 +24,41 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/shop")
+    public String shop() {
+        return "shop";
+    }
+
+    @GetMapping("/shop-detail")
+    public String shopDetail() {
+        return "shop-detail";
+    }
+
+    @GetMapping("/cart")
+    public String cart() {
+        return "cart";
+    }
+
+    @GetMapping("/chackout")
+    public String chackout() {
+        return "chackout";
+    }
+
+    @GetMapping("/testimonial")
+    public String testimonial() {
+        return "testimonial";
+    }
+
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
+
+    @GetMapping("/404")
+    public String error() {
+        return "404";
+    }
+
     
     @GetMapping("/test")
     public String testPage() {

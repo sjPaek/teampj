@@ -28,6 +28,22 @@
             }
         } 
     });
+    var btns = {
+        '.homeBtn': '/',
+        '#shopBtn': '/shop',
+        '#shopDetailBtn': '/shop-detail',
+        '#cartBtn': '/cart',
+        '#chackoutBtn': '/chackout',
+        '#testimonialBtn': '/testimonial',
+        '#contactBtn': '/contact',
+        '#404Btn': '/404'
+    }
+    
+    $.each(btns, function(btn, url){
+        $(btn).on('click', function(){
+            window.location.href = url;
+        });
+    });
     
     
    // Back to top button
@@ -130,7 +146,8 @@
     });
 
 
-
+    
+    
     // Product Quantity
     $('.quantity button').on('click', function () {
         var button = $(this);
@@ -146,6 +163,10 @@
         }
         button.parent().parent().find('input').val(newVal);
     });
+
+
+
+
 
 })(jQuery);
 
