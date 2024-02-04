@@ -51,9 +51,9 @@ public class IndexController {
         return "contact";
     }
 
-    @GetMapping("/404")
+    @GetMapping("/error")
     public String error() {
-        return "404";
+        return "common/404";
     }
 
     
