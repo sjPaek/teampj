@@ -12,16 +12,13 @@ import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.web.bind.annotation.PostMapping;
 
-
-
-
 @Slf4j
 @Controller
 public class IndexController {
 
     @GetMapping("/")
     public String index() {
-        return "index";
+        return "index"; 
     }
 
     @GetMapping("/shop")
