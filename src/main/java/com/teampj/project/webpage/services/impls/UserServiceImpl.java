@@ -5,11 +5,19 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.teampj.project.webpage.entities.UserEntity;
 import com.teampj.project.webpage.models.UserModel;
 import com.teampj.project.webpage.repos.UserRepo;
-import com.teampj.project.webpage.services.BoardService;
+import com.teampj.project.webpage.services.UserService;
 
 @Service
-public class BoardSerivceImpl implements BoardService{
-        
+public class UserServiceImpl implements UserService {
+    @Autowired
+    UserRepo userRepo;
+    
+    public List<UserEntity> selectUsers(){
+        return userRepo.findAll();
+
+    }
+    
 }
