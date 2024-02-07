@@ -1,5 +1,7 @@
 package com.teampj.project.webpage.models;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,14 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class ResponseModel <T> {
-    
-    private String msg;
     private boolean ok;
-    private T data;
-    
-    public ResponseModel(boolean ok, String msg, T data){
-        this.ok = ok;
-        this.msg = msg;
-        this.data = data;
-    }
+    private String msg;    
+    private T object;
+    private List<T> list;
 }

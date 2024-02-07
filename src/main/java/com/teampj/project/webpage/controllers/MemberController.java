@@ -5,26 +5,24 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.teampj.project.webpage.entities.UserEntity;
-import com.teampj.project.webpage.models.UserModel;
-import com.teampj.project.webpage.services.UserService;
+import com.teampj.project.webpage.entities.MemberEntity;
+import com.teampj.project.webpage.services.MemberService;
 
 import lombok.extern.slf4j.Slf4j;
 
 
 @Slf4j
 @Controller
-public class UserController {
+public class MemberController {
 
     @Autowired
-    UserService userService;
+    MemberService memberService;
 
-    @GetMapping("/user")
+    @GetMapping("/members")
     public @ResponseBody void test() {
-        List<UserEntity>  users = userService.selectUsers();
+        List<MemberEntity>  users = memberService.selectUsers();
 
         log.info(users.toString());
     }
