@@ -22,7 +22,7 @@ var btns = {
     '#chackoutBtn': '/chackout',
     '#testimonialBtn': '/testimonial',
     '#contactBtn': '/contact',
-    '#404Btn': '/404'
+    '#boardBtn': '/board'
 }
 
 $.each(btns, function(btn, url){
