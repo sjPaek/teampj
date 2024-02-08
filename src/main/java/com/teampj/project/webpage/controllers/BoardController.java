@@ -1,6 +1,7 @@
 package com.teampj.project.webpage.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -10,6 +11,11 @@ public class BoardController {
     @GetMapping("board")
     public String board() {
         return "board/list";
+    }
+
+    @GetMapping("boardEdit")
+    public String board_edit() {
+        return "board/edit";
     }
 
     // @PostMapping("path")
