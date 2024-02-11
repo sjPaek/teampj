@@ -1,5 +1,9 @@
 package com.teampj.project.webpage.repos;
 
-public class BoardRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.teampj.project.webpage.entities.DocumentEntity;
+
+public interface BoardRepo extends JpaRepository<DocumentEntity, Integer>{
     
 }
