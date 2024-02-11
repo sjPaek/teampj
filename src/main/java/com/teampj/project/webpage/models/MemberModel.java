@@ -17,5 +17,7 @@ public class MemberModel {
     private String userPassword;
     private String userAddress;
     private String userEmail;
+    private String userTel;
+    private Integer userLevel;
     
 }

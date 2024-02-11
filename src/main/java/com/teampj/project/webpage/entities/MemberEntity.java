@@ -35,5 +35,11 @@ public class MemberEntity {
 
     @Column(name = "user_email")
     private String userEmail;
+
+    @Column(name = "user_tel")
+    private String userTel;
+
+    @Column(name = "user_level")
+    private Integer userLevel;
  
 }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff; /* 블루 */
+        }
+        label {
+            font-weight: bold;
+            color: #007bff; /* 블루 */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #007bff; /* 블루 */
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #007bff; /* 블루 */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* 더 진한 블루 */
+        }
+    </style>
+
+    <th:block th:replace="/common/common"></th:block>
+</head>
+<body>
+    <th:block th:replace="common/header :: headerFragment"></th:block>
+    <div class="container-fluid page-header py-5">
+        <h1 class="text-center text-white display-6">My Info</h1>
+        <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active text-white">Shop Detail</li>
+        </ol>
+    </div>
+    <div class="container">
+        <h1>My Info</h1>
+        <form id="myinfoForm">
+            <input type="hidden" id="seq" name="seq" th:value="${member.seq}">
+            <label for="userId">ID:</label><br>
+            <input type="text" id="userId" name="userId" th:value="${member.userId}" disabled><br>
+            
+            <label for="userPassword">Password:</label><br>
+            <input type="password" id="userPassword" name="userPassword" th:value="${member.userPassword}"><br>
+            
+            <label for="userName">Name:</label><br>
+            <input type="text" id="userName" name="userName" th:value="${member.userPassword}"><br>
+            
+            <label for="userEmail">Email:</label><br>
+            <input type="email" id="userEmail" name="userEmail" th:value="${member.userEmail}"><br>
+            
+            <label for="userTel">Tel:</label><br>
+            <input type="text" id="userTel" name="userTel" th:value="${member.userTel}"><br>
+            
+            <label for="userAddress">Address:</label><br>
+            <input type="text" id="userAddress" name="userAddress" th:value="${member.userAddress}"><br>
+            
+            <input type="submit" value="Save Changes">
+            <!-- <button type="submit">Save Changes</button> -->
+        </form>
+    </div>
+    <!-- <th:block th:replace="common/footer :: footerFragment"></th:block> -->
+</body>
+<script src="/js/myinfo.js"></script>
+</html>
