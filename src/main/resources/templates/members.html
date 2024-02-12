@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Fruitables - Vegetable Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- <th:block th:replace="common/common :: libFragment"></th:block> -->
+        <th:block th:replace="common/common"></th:block>
+        <link rel="stylesheet" href="/css/board/list.css">
+    </head>
+
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar start -->
+        <th:block th:replace="common/header :: headerFragment"></th:block>
+        <!-- Navbar End -->
+
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5">
+            <h1 class="text-center text-white display-6">Members</h1>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active text-white">Members</li>
+            </ol>
+        </div>
+        <!-- Single Page Header End -->
+
+        <!-- board start -->
+        <div class="container-fluid testimonial py-5">
+            <div class="container py-5">
+                <div class="container" style="max-width: 1000px">
+                    <div class="notice-header text-center">
+                        <h1 class="display-5 mb-5 text-dark">회원관리</h1>
+                    </div>
+
+                    <div class="search_area">
+                        <form id="boardScForm">
+                            <div class="form-group">
+                                <select name="searchMember" id="searchMember">
+                                    <option value="userId">ID</option>
+                                    <option value="userName">이름</option>
+                                    <option value="userEmail">이메일</option>
+                                    <option value="userTel">연락처</option>
+                                </select>
+                                <input type="text" id="searchValue" name="searchValue" class="form-control">
+                                <button type="button" id="search" class="btn btn-primary">조회 <i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <br/>
+                
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr id="theadTr">
+                                    <th>No</th>
+                                    <th>ID</th>
+                                    <th>NAME</th>
+                                    <th>EMAIL</th>
+                                    <th>TEL</th>
+                                    <th>LEVEL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr th:each="board : ${list}">
+                                    <td><a href="#" th:text="${board.dcmtCode}" id="dcmtCode"></a></td>
+                                    <td><a href="#" th:text="${board.dcmtTitle}" id="dcmtTitle"></a></td>
+                                    <td th:text="${board.userId}" id="userId"></td>
+                                    <td th:text="${board.regDate}" id="regDate"></td>
+                                    <td th:text="${board.dcmtCnt}" id="dcmtCnt"></td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination" id="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            </ul>
+                        </nav>
+
+                        <!-- <th:block th:each="page:${#numbers.sequence(startPage,endPage)}">
+                            <a th:if="${page != nowPage}" th:href="@{/board/list(page=${page-1})}" th:text ="${page}"></a>
+                            <strong th:if="${page==nowPage}" th:text ="${page}" style="color:red"></strong>
+                        </th:block> -->
+
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-primary float-end" id="memberInsert">회원추가</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div> <!-- container -->
+                    
+            </div>
+        </div>
+        <!-- board End -->
+
+        <th:block th:replace="common/footer :: footerFragment"></th:block>
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+    <!-- Template Javascript -->
+    </body>
+
+</html>

@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import com.teampj.project.webpage.entities.MemberEntity;
 import com.teampj.project.webpage.models.MemberModel;
-import com.teampj.project.webpage.models.ResponseModel;
 import com.teampj.project.webpage.repos.MemberRepo;
 import com.teampj.project.webpage.services.LoginService;
 
@@ -25,6 +24,8 @@ public class LoginServiceImpl implements LoginService{
                                             .userPassword(memberEntity.getUserPassword())
                                             .userAddress(memberEntity.getUserAddress())
                                             .userEmail(memberEntity.getUserEmail())
+                                            .userTel(memberEntity.getUserTel())
+                                            .userLevel(memberEntity.getUserLevel())
                                             .build();
 
 

@@ -21,10 +21,8 @@ public class MemberController {
     MemberService memberService;
 
     @GetMapping("/members")
-    public @ResponseBody void test() {
-        List<MemberEntity>  users = memberService.selectUsers();
-
-        log.info(users.toString());
+    public String test() {
+        return "members";
     }
     
     

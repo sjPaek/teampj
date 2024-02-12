@@ -34,11 +34,13 @@ public class LoginController {
 
         MemberModel member = loginService.getMemberByUserId(model);
 
+
         if(model.getUserPassword().equals(member.getUserPassword())){            
             if(session == null || session.getAttribute("logged") == null){
                 session.setAttribute("logged", member);
             }
-
+            
+            log.info(member.toString());
             return new ResponseModel<>(true, "정상적으로 로그인 되었습니다", null, null);
         }else{            
             return new ResponseModel<>(false, "로그인이 실패했습니다. 다시 시도해주세요", null, null);
