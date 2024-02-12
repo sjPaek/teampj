@@ -45,15 +45,25 @@
                                 <i class="fa fa-shopping-bag fa-2x"></i>
                                 <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
                             </a>
-                            <a href="/myinfo" class="my-auto">
-                                <i class="fas fa-user fa-2x"></i>
-                            </a>
+                            <th:block th:if="${session.logged} != null">
+                                <a href="/myinfo" class="my-auto">
+                                    <i class="fas fa-user fa-2x"></i>
+                                </a>
+                            </th:block>
+                            <th:block th:if="${session.logged} == null">
                             <a href="/login">
                                 <span class="material-icons" style="font-size: 40px">
                                     login
                                 </span>
                             </a>
-                            
+                            </th:block>
+                            <th:block th:if="${session.logged} != null">
+                                <a href="/logout">
+                                    <span class="material-icons" style="font-size: 40px">
+                                        logout
+                                    </span>
+                                </a>
+                            </th:block>                            
                         </div>
                     </div>
                 </nav>

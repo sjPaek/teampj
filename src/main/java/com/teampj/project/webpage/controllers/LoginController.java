@@ -10,6 +10,8 @@ import com.teampj.project.webpage.services.LoginService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -43,6 +45,14 @@ public class LoginController {
         }
     
     }
+
+    @GetMapping("/logout")
+    public String getMethodName(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        session.setAttribute("logged", null);
+        return "index";
+    }
+    
     
     
     
