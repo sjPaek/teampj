@@ -90,17 +90,17 @@
         </div>
     </div>
     <!-- Copyright End -->
-    <div class="modal" tabindex="-1" role="dialog" id="alarmModal">
+    <div class="modal" tabindex="-1" role="dialog" id="msgModal">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
+              <h5 class="modal-title" id="msgModalTitle">Modal title</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Modal body text goes here.</p>
+              <p id="msgModalBody">Modal body text goes here.</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary">Save changes</button>
@@ -113,5 +113,7 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+    <script src="js/modal.js"></script>
 </th:block>
+
 </html>
