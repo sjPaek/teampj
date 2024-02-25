@@ -23,7 +23,6 @@ public class MemberEntity {
     @Column(name = "user_name")
     private String userName;
 
-
     @Column(name = "user_id")
     private String userId;
 
