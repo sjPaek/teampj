@@ -32,6 +32,7 @@ $(document).ready(function () {
 			if(result){
 				if(confirm('등록하시겠습니까?')){
 					data = JSON.stringify(data);
+					console.log(data);
 					httpRequest('/board/insert', data, 'POST', 'insert');
 				}
 			}
@@ -89,7 +90,7 @@ $(document).ready(function () {
 	// AJAX 실패시
 	function errorHttpRequest(request, status, error, flag) {
 		var errorMsgs = request.responseJSON;
-		swal_error(errorMsgs.error);
+		alert(errorMsgs);
 		console.log(errorMsgs);
 		console.log(error);
 	}
@@ -100,7 +101,7 @@ $(document).ready(function () {
 	    	asyncOption = true;
 	    }
 		$.ajax({
-			url: g_context + url,
+			url: url,
 			method: method,
 			data: data,
 			dataType: "json",
