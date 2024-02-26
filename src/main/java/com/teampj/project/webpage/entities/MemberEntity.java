@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.teampj.project.webpage.models.MemberModel;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -40,5 +42,11 @@ public class MemberEntity {
 
     @Column(name = "user_level")
     private Integer userLevel;
+
+    public MemberModel toModel(){
+        return new MemberModel(seq, userName, userId, userPassword, userAddress, userEmail, userTel, userLevel);
+    }
+
+
  
 }
