@@ -25,6 +25,7 @@ public class MemberModel {
     public MemberModel (MemberEntity member) {
         seq = member.getSeq();
         userName = member.getUserName();
+        userId = member.getUserId();
         userPassword = member.getUserPassword();
         userAddress = member.getUserAddress();
         userEmail = member.getUserEmail();

@@ -40,8 +40,7 @@ public class MemberController {
         List<MemberEntity> membersEntity = memberService.selectUsers();
 
         List<MemberModel> members = membersEntity.stream().map(MemberModel::new).collect(Collectors.toList());
-
-        log.info(members.toString());
+        
         return new ResponseModel<>(true, "정상적으로 조회되었습니다", members, null);
     }
 

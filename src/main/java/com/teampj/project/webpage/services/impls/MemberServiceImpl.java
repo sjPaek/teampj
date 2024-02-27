@@ -13,14 +13,16 @@ import com.teampj.project.webpage.models.MemberModel;
 import com.teampj.project.webpage.repos.MemberRepo;
 import com.teampj.project.webpage.services.MemberService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class MemberServiceImpl implements MemberService {
     @Autowired
     MemberRepo memberRepo;
     
-    public List<MemberEntity> selectUsers(){
-        return memberRepo.findAll();
-
+    public List<MemberEntity> selectUsers(){        
+        return memberRepo.findAll();    
     }
 
     public Optional<MemberEntity> getMemberBySeq(int seq){

@@ -62,16 +62,16 @@
                     <div>
                         <table class="table">
                             <thead>
-                                <tr id="theadTr">
-                                    <th>No</th>
-                                    <th>ID</th>
-                                    <th>NAME</th>
-                                    <th>EMAIL</th>
-                                    <th>TEL</th>
-                                    <th>LEVEL</th>
+                                <tr class="text-center">
+                                    <td>No</td>
+                                    <td>ID</td>
+                                    <td>NAME</td>
+                                    <td>EMAIL</td>
+                                    <td>TEL</td>
+                                    <td>LEVEL</td>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="memberList">
                                 <!-- <tr th:each="board : ${list}">
                                     <td><a href="#" th:text="${board.dcmtCode}" id="dcmtCode"></a></td>
                                     <td><a href="#" th:text="${board.dcmtTitle}" id="dcmtTitle"></a></td>
@@ -119,10 +119,41 @@
         <!-- board End -->
 
         <th:block th:replace="common/footer :: footerFragment"></th:block>
-
+        <!-- modal-->
+        <div class="modal" id="memberModal" tabindex="-1" aria-labelledby="memberModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>                    
+                  </form>                  
+                </div>   
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>             
+              </div>
+            </div>
+          </div>
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        <!-- <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>    -->
 
     <!-- Template Javascript -->
     </body>
