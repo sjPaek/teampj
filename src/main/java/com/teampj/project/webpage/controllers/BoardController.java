@@ -64,6 +64,25 @@ public class BoardController {
 	}
 
     // @PostMapping("/board/insert")
+	// // public ResponseEntity<String> insert(@RequestBody BoardModel boardModel) {
+	// // 	String board = boardModel.getDcmtTitle()+" "+boardModel.getDcmtText();
+	// // 	log.info(board.toString());
+	// // 	return ResponseEntity.status(HttpStatus.OK).body(board);
+	// // }
+	// public String insert(ModelMap model) throws Exception {
+	// 	List<BoardEntity> board = boardService.insert();        
+	// 	model.addAttribute("board", board);
+	// 	log.info(board.toString());
+	// 	return "jsonView"; //model에 담은 데이터를 json화 한다고 생각하면 편하다(bean에 jsonview 선언)
+	// }
+    // @PostMapping("/board/insert")
+    // public @ResponseBody void save() {
+        
+    //     System.out.println("ok");
+    //     // return new ResponseModel<>(true, "정상적으로 저장되었습니다", null);
+    // }
+
+    // @PostMapping("/board/insert")
     // public @ResponseBody void save() {
         
     //     System.out.println("ok");
