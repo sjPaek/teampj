@@ -8,6 +8,7 @@ const evtSubmitLogin = (e) => {
         if(data.ok){
             location.href="/";
         }else{
+            showMessage('Error', data.msg);
             location.href="/login";            
         }
     })
@@ -15,5 +16,5 @@ const evtSubmitLogin = (e) => {
 }
 
 $(() => {
-    $('#loginForm').on('submit', evtSubmitLogin);
+    $('#loginForm').on('submit', evtSubmitLogin);    
 })

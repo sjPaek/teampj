@@ -44,7 +44,7 @@ public class MemberEntity {
     private Integer userLevel;
 
     public MemberModel toModel(){
-        return new MemberModel(seq, userName, userId, userPassword, userAddress, userEmail, userTel, userLevel);
+        return new MemberModel(seq, userName, userId, userPassword, null, userAddress, userEmail, userTel, userLevel);
     }
 
 

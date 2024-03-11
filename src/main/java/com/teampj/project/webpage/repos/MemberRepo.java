@@ -1,5 +1,6 @@
 package com.teampj.project.webpage.repos;
 
+import java.lang.reflect.Member;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,12 +13,11 @@ public interface MemberRepo extends JpaRepository<MemberEntity, Integer>{
 
     List<MemberEntity> findAll();
 
-
     Optional<MemberEntity> findById(int seq);
 
-    MemberEntity findByUserId(String userId);
+    Optional<MemberEntity> findByUserId(String userId);
 
-    MemberEntity save(MemberEntity entity);
+    // MemberEntity findByUserId(String userId);
 
     MemberEntity deleteById(int seq);
 }

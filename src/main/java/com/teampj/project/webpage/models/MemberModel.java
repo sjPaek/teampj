@@ -13,10 +13,11 @@ import lombok.NoArgsConstructor;
 @Builder
 public class MemberModel {
     
-    private int seq;
+    private Integer seq;
     private String userName;
     private String userId;
     private String userPassword;
+    private String userPasswordCheck;
     private String userAddress;
     private String userEmail;
     private String userTel;
